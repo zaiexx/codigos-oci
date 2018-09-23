@@ -6,7 +6,9 @@ typedef pair<int,int> ii; //creo el tipo de dato ii (es un par de enteros)
 typedef vector<int> vi; //creo el tipo de dato vi (es un vector de enteros)
 typedef vector<ii> vii; //creo el tipo de dato vii (es un vector de pares de enteros)
 
-bool srt(ii a, ii b){return a.second < b.second;} //funcion para ordenar de menor a mayor
+struct srt {
+	bool operator ()(ii a, ii b){return a.second < b.second;}
+}; //funcion para ordenar de menor a mayor
 
 struct dkstra{ //creo la estructura dkstra (basicamente es un objeto pero de c, recuerden la clase)
 
@@ -68,11 +70,11 @@ struct dkstra{ //creo la estructura dkstra (basicamente es un objeto pero de c, 
 int main(){
 	
 	dkstra dk(5);
-	dk.push(0,4,3);
-	dk.push(4,1,1);
-	dk.push(0,1,20);
-	dk.push(1,3,2);
-	dk.push(1,2,5);
+	dk.pushTwo(0,4,3);
+	dk.pushTwo(4,1,1);
+	dk.pushTwo(0,1,20);
+	dk.pushTwo(1,3,2);
+	dk.pushTwo(1,2,5);
 	
 	printf("%d\n\n",dk.magia(0,2));
 	printf("%d\n\n",dk.magia(2,0));
