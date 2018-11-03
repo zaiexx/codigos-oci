@@ -42,7 +42,7 @@ struct dkstra{ //creo la estructura dkstra (basicamente es un objeto pero de c, 
 		
 		cola.push(ii(ini,dis[ini]));//meto a la cola el nodo y la distancia
 		
-		int total; //inicio la variable q guardara el tamaño del camino minimo
+		int total = INF; //inicio la variable q guardara el tamaño del camino minimo (si no encuentra va a devolver el INF)
 		
 		while(!cola.empty()){ //hasta q no haya ningun nodo en la cola
 			
@@ -64,7 +64,7 @@ struct dkstra{ //creo la estructura dkstra (basicamente es un objeto pero de c, 
 		return total;
 	}
 	
-	int getdis(int x){return dis[x];};
+	int getdis(int x){return dis[x];}; //si quieren saber la distancia del nodo inicial a cualquiera usen esta (se debe ejcutar magia una vez)
 };
 
 int main(){
