@@ -22,16 +22,16 @@ char grilla[MAX_FILAS][MAX_COLUMNAS];
 
 /*  .....
     .123.
-	.8X4.
-	.765.
-	.....
+    .8X4.
+    .765.
+    .....
 */
 
 // Si queremos ir desde X a 1, debemos restar 1 a la fila y debemos restar 1 a la columna
 // Si queremos ir desde X a 4, la fila no cambia, y debemos sumar 1 a la columna
 // Estos movimientos los representamos con los arreglos a continuación.
 
-// movi:	 1   2   3   4   5   6   7   8
+// movi:     1   2   3   4   5   6   7   8
 int df[] = {-1, -1, -1,  0,  1,  1,  1,  0}; 
 int dc[] = {-1,  0,  1,  1,  1,  0, -1, -1}; 
 
