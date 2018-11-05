@@ -2,6 +2,9 @@
 #include <queue>
 #include <vector>
 
+//Este codigo considera que los nodos comienzan desde 0
+//Si los nodos parten de 1 hasta N, restarles 1 al momento de guadar en la lista
+
 using namespace std;
 // Numero muy grande. Tambien sirve tener un numero negativo
 #define INF 1000000000
@@ -77,7 +80,7 @@ int main() {
   q.push(inicio);
   //mientras nos queden nodos por procesar
   while (!q.empty()) {
-    // Recuperamos el nodo actual. En las colas, es obligación eliminar el
+    // Recuperamos el nodo actual. En las colas, es obligaciÃ³n eliminar el
     // elemento (pop) para poder pasar al siguiente. front nos devuelve el
     // nodo actual
     int actual = q.front();
@@ -95,6 +98,8 @@ int main() {
       }
     }
   }
+  
+  cout << "Camino minimo = " << dist[destino] << endl;
   
   return 0;
 }
