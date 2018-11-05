@@ -33,11 +33,6 @@ bool limites(int x, int y) {
     return x >= 0 && x < F && y >= 0 && y < C;
 }
 
-int bfs() {
-
-    return NO_VISITADO;
-}
-
 int main() {
 
     ios_base::sync_with_stdio(false);
